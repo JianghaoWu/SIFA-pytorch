@@ -13,7 +13,7 @@ matplotlib.use('Agg')
 # train
 def train():
     # load config
-    config = "/data2/jianghao/Two/SIFA/config/train.cfg"
+    config = "./SIFA/config/train.cfg"
     config = parse_config(config)
     # load data
     print(config)

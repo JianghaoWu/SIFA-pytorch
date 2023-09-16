@@ -22,7 +22,6 @@ class DiceLoss(nn.Module):
         self.n_classes = n_classes
         
     def one_hot_encode(self,input_tensor):
-        print(input_tensor.shape,'inpt')
         tensor_list = []
         for i in range(self.n_classes):
             tmp = (input_tensor==i) * torch.ones_like(input_tensor)
@@ -30,29 +29,13 @@ class DiceLoss(nn.Module):
         output_tensor = torch.cat(tensor_list,dim=1)
         return output_tensor.float()
     
-    # def forward(self,input,target,weight=None,softmax=True):
-    #     if softmax:
-    #         inputs = F.softmax(input,dim=1)
-    #     target = self.one_hot_encode(target)
-    #     if weight is None:
-    #         weight = [1] * self.n_classes
-    #     assert inputs.shape == target.shape,'size must match'
-    #     class_wise_dice = []
-    #     loss = 0.0
-    #     for i in range(self.n_classes):
-    #         diceloss = dice_loss(inputs[:,i], target[:,i])
-    #         class_wise_dice.append(diceloss)
-    #         loss += diceloss * weight[i]
-    #     return loss/self.n_classes
+
     def forward(self,input,target,weight=None,softmax=True):
         if softmax:
             inputs = F.softmax(input,dim=1)
-        print(inputs.shape, target.shape,"inputs.shape, target.shape, before")
         target = self.one_hot_encode(target)
-        print(inputs.shape, target.shape,"inputs.shape, target.shape, mid")
         if weight is None:
             weight = [1] * self.n_classes
-        print(inputs.shape, target.shape,"inputs.shape, target.shape, after")
         assert inputs.shape == target.shape,'size must match'
         class_wise_dice = []
         loss = 0.0
@@ -72,7 +55,6 @@ class WeightedCrossEntropyLoss(nn.Module):
         weight = []
         for c in range(self.num_classes):
             weight_c = torch.sum(target == c).float()
-            #print("weightc for c",c,weight_c)
             weight.append(weight_c)
         weight = torch.tensor(weight).to(target.device)
         weight = 1 - weight / (torch.sum(weight))
@@ -80,7 +62,6 @@ class WeightedCrossEntropyLoss(nn.Module):
             assert target.shape[1] == 1
             target = target[:, 0]
         wce_loss = F.cross_entropy(predict, target.long(), weight)
-        #print("Weight CE:",weight)
         return wce_loss
 
 
