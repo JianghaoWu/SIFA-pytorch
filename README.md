@@ -42,9 +42,17 @@ CUDA_LAUNCH_BLOCKING=0 python test.py
 ```
 
 
-#### If you find the code useful, please consider citing the following article:
+#### There are other UDA methods you can try. And if you find the code useful, please consider comparing and citing the following article (with [code](https://github.com/HiLab-git/FPL-plus)):
 
 ```bibtex
+@article{wu2024fpl+,
+  title={FPL+: Filtered Pseudo Label-based Unsupervised Cross-Modality Adaptation for 3D Medical Image Segmentation},
+  author={Wu, Jianghao and Guo, Dong and Wang, Guotai and Yue, Qiang and Yu, Huijun and Li, Kang and Zhang, Shaoting},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2024},
+  publisher={IEEE}
+}
+
 @inproceedings{wu2022fpl,
   title={FPL-UDA: Filtered Pseudo Label-Based Unsupervised Cross-Modality Adaptation for Vestibular Schwannoma Segmentation},
   author={Wu, Jianghao and Gu, Ran and Dong, Guiming and Wang, Guotai and Zhang, Shaoting},
@@ -53,13 +61,19 @@ CUDA_LAUNCH_BLOCKING=0 python test.py
   year={2022},
   organization={IEEE}
 }
-@article{dorent2023crossmoda,
-  title={CrossMoDA 2021 challenge: Benchmark of cross-modality domain adaptation techniques for vestibular schwannoma and cochlea segmentation},
-  author={Dorent, Reuben and Kujawa, Aaron and Ivory, Marina and Bakas, Spyridon and Rieke, Nicola and Joutard, Samuel and Glocker, Ben and Cardoso, Jorge and Modat, Marc and Batmanghelich, Kayhan and others},
-  journal={Medical Image Analysis},
-  volume={83},
-  pages={102628},
+
+
+
+```
+#### Furthermore, Source-Free Domain Adaptation is a more advanced domain adaptation task that does not require source domain data for adaptation. Please refer to the following paper (with [code](https://github.com/HiLab-git/UPL-SFDA)):
+```bibtex
+@ARTICLE{10261231,
+  author={Wu, Jianghao and Wang, Guotai and Gu, Ran and Lu, Tao and Chen, Yinan and Zhu, Wentao and Vercauteren, Tom and Ourselin, Sébastien and Zhang, Shaoting},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={UPL-SFDA: Uncertainty-Aware Pseudo Label Guided Source-Free Domain Adaptation for Medical Image Segmentation}, 
   year={2023},
-  publisher={Elsevier}
-}
+  volume={42},
+  number={12},
+  pages={3932-3943}
+
 ```
