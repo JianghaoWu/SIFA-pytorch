@@ -1,4 +1,4 @@
-# SIFA-pytorch
+﻿# SIFA-pytorch
 This is a PyTorch implementation of SIFA for 'Unsupervised Bidirectional Cross-Modality Adaptation via Deeply Synergistic Image and Feature Alignment for Medical Image Segmentation.'
 
 If you find this code useful, please consider citing my UDA research: [*FPL-UDA: Filtered Pseudo Label-Based Unsupervised Cross-Modality Adaptation for Vestibular Schwannoma Segmentation*](https://ieeexplore.ieee.org/abstract/document/9761706). You can access the research paper [here](https://ieeexplore.ieee.org/abstract/document/9761706), and the code is also available [here](https://github.com/JianghaoWu/FPL-UDA).
@@ -42,26 +42,18 @@ CUDA_LAUNCH_BLOCKING=0 python test.py
 ```
 
 
-#### There are other UDA methods you can try. And if you find the code useful, please consider comparing and citing the following article (with [code](https://github.com/HiLab-git/FPL-plus)):
+#### If you find the code useful, please consider citing the following article (with [code](https://github.com/HiLab-git/FPL-plus)):
 
 ```bibtex
 @article{wu2024fpl+,
-  title={FPL+: Filtered Pseudo Label-based Unsupervised Cross-Modality Adaptation for 3D Medical Image Segmentation},
   author={Wu, Jianghao and Guo, Dong and Wang, Guotai and Yue, Qiang and Yu, Huijun and Li, Kang and Zhang, Shaoting},
-  journal={IEEE Transactions on Medical Imaging},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={FPL+: Filtered Pseudo Label-Based Unsupervised Cross-Modality Adaptation for 3D Medical Image Segmentation}, 
   year={2024},
-  publisher={IEEE}
+  volume={43},
+  number={9},
+  pages={3098-3109}
 }
-
-@inproceedings{wu2022fpl,
-  title={FPL-UDA: Filtered Pseudo Label-Based Unsupervised Cross-Modality Adaptation for Vestibular Schwannoma Segmentation},
-  author={Wu, Jianghao and Gu, Ran and Dong, Guiming and Wang, Guotai and Zhang, Shaoting},
-  booktitle={2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)},
-  pages={1--5},
-  year={2022},
-  organization={IEEE}
-}
-
 
 
 ```
