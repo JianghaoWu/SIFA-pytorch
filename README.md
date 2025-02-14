@@ -1,7 +1,6 @@
 ﻿# SIFA-pytorch
 This is a PyTorch implementation of SIFA for 'Unsupervised Bidirectional Cross-Modality Adaptation via Deeply Synergistic Image and Feature Alignment for Medical Image Segmentation.'
 
-If you find this code useful, please consider citing my UDA research: [*FPL-UDA: Filtered Pseudo Label-Based Unsupervised Cross-Modality Adaptation for Vestibular Schwannoma Segmentation*](https://ieeexplore.ieee.org/abstract/document/9761706). You can access the research paper [here](https://ieeexplore.ieee.org/abstract/document/9761706), and the code is also available [here](https://github.com/JianghaoWu/FPL-UDA).
 
 ### 1. Dataset
 
